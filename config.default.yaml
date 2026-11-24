@@ -1,0 +1,106 @@
+elo:
+  base: 1000
+  step: 75
+  k: 32
+  warmup_weeks: 3
+
+realms:
+  - {name: 练气, min: 0}
+  - {name: 筑基, min: 1200}
+  - {name: 金丹, min: 1400}
+  - {name: 元婴, min: 1600}
+  - {name: 化神, min: 1800}
+
+minor_stages: [初期, 中期, 后期, 大圆满]
+minor_step: 50
+
+bench_types:
+  debug:
+    label: 除魔
+    time_limit_min: 90
+    features: [distance, bug_kind, repro, knowledge]
+  read:
+    label: 藏经
+    time_limit_min: 60
+    features: [size, indirection, async, knowledge]
+  design:
+    label: 炼器
+    time_limit_min: 60
+    features: [constraints, concurrency, performance, tradeoffs]
+
+daily_features: [modules, unknowns, clarity, novelty]
+
+difficulty_buckets: [[0, 2], [3, 4], [5, 6], [7, 8], [9, 12]]
+
+sects:
+  cpp:
+    name: 段错宗
+    lang: C++
+    repos:
+      leveldb: https://github.com/google/leveldb
+      abseil-cpp: https://github.com/abseil/abseil-cpp
+      fmt: https://github.com/fmtlib/fmt
+      spdlog: https://github.com/gabime/spdlog
+      geos: https://github.com/libgeos/geos
+      s2geometry: https://github.com/google/s2geometry
+      llama.cpp: https://github.com/ggml-org/llama.cpp
+      whisper.cpp: https://github.com/ggml-org/whisper.cpp
+      onnxruntime: https://github.com/microsoft/onnxruntime
+  c:
+    name: 野指针门
+    lang: C
+    repos:
+      redis: https://github.com/redis/redis
+      curl: https://github.com/curl/curl
+      libuv: https://github.com/libuv/libuv
+      jq: https://github.com/jqlang/jq
+  python:
+    name: 调包宗
+    lang: Python
+    repos:
+      requests: https://github.com/psf/requests
+      flask: https://github.com/pallets/flask
+      httpx: https://github.com/encode/httpx
+      nanoGPT: https://github.com/karpathy/nanoGPT
+      vllm: https://github.com/vllm-project/vllm
+      transformers: https://github.com/huggingface/transformers
+  go:
+    name: 判错宗
+    lang: Go
+    repos:
+      raft: https://github.com/etcd-io/raft
+      groupcache: https://github.com/golang/groupcache
+      prometheus: https://github.com/prometheus/prometheus
+      ollama: https://github.com/ollama/ollama
+  rust:
+    name: 重写宗
+    lang: Rust
+    repos:
+      tokio: https://github.com/tokio-rs/tokio
+      ripgrep: https://github.com/BurntSushi/ripgrep
+      serde: https://github.com/serde-rs/serde
+      candle: https://github.com/huggingface/candle
+  java:
+    name: 八股宗
+    lang: Java
+    repos:
+      guava: https://github.com/google/guava
+      netty: https://github.com/netty/netty
+      kafka: https://github.com/apache/kafka
+  js:
+    name: 学不动宗
+    lang: JavaScript/TypeScript
+    repos:
+      express: https://github.com/expressjs/express
+      axios: https://github.com/axios/axios
+      vite: https://github.com/vitejs/vite
+      transformers.js: https://github.com/huggingface/transformers.js
+  php:
+    name: 最好宗
+    lang: PHP
+    repos:
+      laravel: https://github.com/laravel/framework
+      symfony: https://github.com/symfony/symfony
+      composer: https://github.com/composer/composer
+
+extra_repos: {}

@@ -1,0 +1,19 @@
+# 宗门任务日志：任务开始前填 title/difficulty/predict，结束后填 actual。
+# difficulty 每项 0~3，按客观特征打分，不按感觉：
+#   modules  涉及模块数: 0=1个函数内 1=1个模块 2=2~3个模块 3=跨服务/跨系统
+#   unknowns 开始时关键未知点数: 0=0 1=1 2=2~3 3=>=4
+#   clarity  需求清晰度: 0=完全明确 1=小部分需自己定 2=大部分需自己定 3=问题本身需自己定义
+#   novelty  领域新旧: 0=熟悉 1=部分新 2=大部分新 3=全新领域
+# 跨天任务在完成当天记录，actual.hours 填累计耗时。actual.done 留空视为未完成，不计入统计。
+date: {date}
+state:                   # 当天精神状态 1~5
+tasks:
+  - id: {compact}-01
+    title:
+    difficulty: {{modules: 0, unknowns: 0, clarity: 0, novelty: 0}}
+    predict: {{hours: , key_point: }}
+    actual:
+      hours:
+      first_judgment_correct:      # true/false 预测的难点或根因是否正确
+      stuck_30min: 0               # 卡住超过 30 分钟的次数
+      done:                        # true/false

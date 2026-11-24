@@ -1,0 +1,9 @@
+# 照心镜：挑一段 2~3 个月前自己写并已合入的代码重读，记录现在能看出的问题。
+# issues: severe=会导致错误或隐患 normal=设计或可维护性问题 minor=风格与细节
+month: {month}
+reviews:
+  - change:                  # 提交号、PR 号或任意能定位代码的标识
+    merged_at:               # YYYY-MM-DD
+    issues: {{severe: 0, normal: 0, minor: 0}}
+    would_rewrite:           # true/false 现在是否会换种写法
+    note:
